@@ -12,7 +12,7 @@ public class Application1 {
         num1 ++;
         System.out.println("num1 = " + num1); // byte의 최소 저장 범위
 
-        // 언어 플로우
+        // 언더 플로우
         // 오버플로우와 반대 개념으로 최소 범위보다 작은 수를 발생시키는 경우 언더플로우가 발생한다.
         byte num2 = -128;
         System.out.println("num2 = " + num2); // byte의 최소 저장 범위

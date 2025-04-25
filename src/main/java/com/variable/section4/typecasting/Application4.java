@@ -4,7 +4,7 @@ public class Application4 {
     public static void main(String[] args) {
         // 형변환 시 주의할 점
 
-        // 1. 의도하지 않은 데이터 솔실
+        // 1. 의도하지 않은 데이터 손실
         int inum = 290;
         byte bnum = (byte) inum;
 
