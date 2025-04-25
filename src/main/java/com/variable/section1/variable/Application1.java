@@ -1,4 +1,4 @@
-package com.literal_variable.section02.variable;
+package com.variable.section1.variable;
 
 public class Application1 {
     public static void main(String[] args) {

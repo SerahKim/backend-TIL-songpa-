@@ -7,7 +7,7 @@ H 내용을 정리하고 있습니다.
 
 ## 📌 학습 요약
 
-- [literal_virable](src/main/java/com/literal_variable): 리터럴과 변수
+- [literal_virable](src/main/java/com/variable): 리터럴과 변수
 
 ## 🙌 기타 정보
 
