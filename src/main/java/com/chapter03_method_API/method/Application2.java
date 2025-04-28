@@ -1,4 +1,4 @@
-package com.method;
+package com.chapter03_method_API.method;
 
 public class Application2 {
     public static void main(String[] args) {

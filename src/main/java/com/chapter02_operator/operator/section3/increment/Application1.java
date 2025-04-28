@@ -1,4 +1,4 @@
-package com.operator.section3.increment;
+package com.chapter02_operator.operator.section3.increment;
 
 public class Application1 {
     public static void main(String[] args) {

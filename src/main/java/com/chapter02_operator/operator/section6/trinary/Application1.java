@@ -1,4 +1,4 @@
-package com.operator.section6.trinary;
+package com.chapter02_operator.operator.section6.trinary;
 
 public class Application1 {
     public static void main(String[] args) {

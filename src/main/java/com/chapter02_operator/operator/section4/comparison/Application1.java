@@ -1,4 +1,4 @@
-package com.operator.section4.comparison;
+package com.chapter02_operator.operator.section4.comparison;
 
 public class Application1 {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.operator.section2.assignment;
+package com.chapter02_operator.operator.section2.assignment;
 
 public class Application1 {
     public static void main(String[] args) {

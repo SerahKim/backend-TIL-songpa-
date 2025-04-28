@@ -1,4 +1,4 @@
-package com.variable.section3.overflow;
+package com.chapter01_literal_variable.variable.section3.overflow;
 
 public class Application1 {
     public static void main(String[] args) {

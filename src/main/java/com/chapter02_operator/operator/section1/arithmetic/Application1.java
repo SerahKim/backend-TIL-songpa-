@@ -1,4 +1,4 @@
-package com.operator.section1.arithmetic;
+package com.chapter02_operator.operator.section1.arithmetic;
 
 public class Application1 {
     public static void main(String[] args) {

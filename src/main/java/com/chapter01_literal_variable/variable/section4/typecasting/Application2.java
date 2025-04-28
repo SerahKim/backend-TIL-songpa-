@@ -1,4 +1,4 @@
-package com.variable.section4.typecasting;
+package com.chapter01_literal_variable.variable.section4.typecasting;
 
 public class Application2 {
     public static void main(String[] args) {
