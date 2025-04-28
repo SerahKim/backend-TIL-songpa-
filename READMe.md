@@ -7,7 +7,10 @@ H 내용을 정리하고 있습니다.
 
 ## 📌 학습 요약
 
-- [literal_virable](src/main/java/com/variable): 리터럴과 변수
+- [literal_and_virable](src/main/java/com/chapter01_literal_variable) : 리터럴과 변수
+- [operator](src/main/java/com/chapter02_operator) : 연산자
+- [method_and_API](src/main/java/com/chapter03_method_API) : 메소드와 API
+
 
 ## 🙌 기타 정보
 
