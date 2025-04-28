@@ -1,4 +1,4 @@
-package com.method.section1;
+package com.method;
 
 public class Application6 {
     public static void main(String[] args) {
