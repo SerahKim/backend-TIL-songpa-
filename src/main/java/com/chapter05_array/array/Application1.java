@@ -1,0 +1,67 @@
+package com.chapter05_array.array;
+
+public class Application1 {
+    public static void main(String[] args) {
+        /*
+        배열이란?
+        - 동일한 자료형의 묶음(연속된 메모리 공간에 값을 저장하고 사용하기 위한 용도)이다.
+        - 배열은 heap 영역에 new 연산자를 이용하여 할당한다.
+        */
+
+        /*
+        배열의 사용 이유?
+        만약 배열을 사용하지 않는다면 변수를 여러 개 사용해야 한다.
+        1. 연속된 메모리 공간으로 관리할 수 없다. (모든 변수의 이름 사용자가 관리해야 한다.)
+        2. 반복문을 이용한 연속 처리가 불가능하다.
+        */
+
+        int num1 = 10;
+        int num2 = 20;
+        int num3 = 30;
+        int num4 = 40;
+        int num5 = 50;
+
+        int sum = 0;
+
+        sum += num1;
+        sum += num2;
+        sum += num3;
+        sum += num4;
+        sum += num5;
+
+        /*
+        배열의 선언 및 할당
+        - 자료형[] 변수명 = new 자료형[배열 길이]
+        - int형 arr은 stack에 처음 할당이 되고 new 연산자를 만나면 그 값이 heap에 배열 길이만큼 할당이 된다.
+        - heap에 할당된 주소값을 stack에 할당되어 있는 arr이 가지고 있음.
+        - heap에 있는 주소값을 참조하면서 arr이 각 배열 요소에 접근함 => 레퍼런스 변수(참조형 변수)
+        */
+        int[] arr = new int[5]; // 길이가 5인 int형 배열 생성
+
+        /*
+        하나의 이름으로 관리되는 연속된 메모리 공간이고,
+        공간마다 찾아갈 수 있는 번호(인덱스)를 이용해 접근한다.
+        */
+        arr[0] = 10;
+        arr[1] = 20;
+        arr[2] = 30;
+        arr[3] = 40;
+        arr[4] = 50;
+
+        /* 반복문으로 값 대입 */
+        for(int i = 0, value = 0; i < arr.length; i++) {
+            arr[i] = value += 10;
+        }
+
+        int sum2 = 0;
+        sum2 += arr[0];
+        sum2 += arr[1];
+        sum2 += arr[2];
+        sum2 += arr[3];
+        sum2 += arr[4];
+
+        System.out.println("sum2 = " + sum2);
+
+
+    }
+}
