@@ -4,7 +4,8 @@ public class Problem2 {
     public static void main(String[] args) {
         /*
         - 문제 설명
-        어떤 자연수를 제곱했을 때 나오는 정수를 제곱수라고 합니다. 정수 n이 매개변수로 주어질 때, n이 제곱수라면 1을 아니라면 2를 return하도록 solution 함수를 완성해주세요.
+        어떤 자연수를 제곱했을 때 나오는 정수를 제곱수라고 합니다. 정수 n이 매개변수로 주어질 때,
+        n이 제곱수라면 1을 아니라면 2를 return하도록 solution 함수를 완성해주세요.
 
         - 제한사항
         1 ≤ n ≤ 1,000,000
@@ -22,16 +23,16 @@ public class Problem2 {
         976은 제곱수가 아닙니다. 따라서 2를 return합니다.
         */
 
-        Math.sqrt(12.0);
+        Problem2 problem2 = new Problem2();
+        System.out.println(problem2.solution(976));
 
 
     }
 
-//    public int solution(int n) {
-//
-//        int result = 0;
-//        if(Math.sqrt((double) n))
-//
-//    }
-
+    public int solution(int n) {
+        if (Math.sqrt(n) % 1 == 0) {
+            return 1;
+        }
+        return 2;
+    }
 }
