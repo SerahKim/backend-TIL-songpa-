@@ -1,35 +1,50 @@
 package com.chapter06_class_object.example;
 
 public class Player {
-    private String name;
-    private int hp;
-    private int attackPower;
+    private Character character;
     private int defensePower;
 
-    public Player(String name, int hp, int attackPower, int defensePower) {
-        this.name = name;
-        this.hp = hp;
-        this.attackPower = attackPower;
-        this.defensePower = defensePower;
+    public Player(String name) {
+        this.character = new Character(name, 800, 100);
+        this.defensePower =80;
     }
 
-    public void attackMonster (Monster monster) {
-        System.out.println(this.name + "(이)가 몬스터를 공격했습니다.");
-        monster.isDemaged(attackPower);
-    }
-
-    public void defense(int monsterAttack) {
-        System.out.println(this.name + "(이)가 " + monsterAttack + "만큼의 공격을 받았습니다.");
-        System.out.println(this.name + "(이)가 " + this.defensePower + "만큼 방어했습니다.");
-        int defense = monsterAttack - defensePower;
-        this.hp -= defense;
-        if (this.hp <= 0 ) {
-            System.out.println(this.name + "은 죽었습니다.");
+    // (1) 공격하기 : 몬스터 공격
+    public void attackMonster(Monster monster) {
+        if (monster != null) {
+            System.out.println(this.character.getName() + "이 " + this.character.getAttackPower() + "만큼 몬스터를 공격했습니다.");
+        monster.takeDamage(this.character.getAttackPower());
         }
-        System.out.println("현재 " + this.name + "의 체력 : " + this.hp);
     }
 
-    public int hp() {
-        return this.hp;
+    public void takeDamage(int damage) {
+        this.character.takeDamage(damage);
+        System.out.println(this.character.getName() + "이 " + damage + "만큼의 피해를 입었습니다.");
     }
+
+    // (2) 방어하기 : 방어력만큼 몬스터 데미지 방어
+    public void defenseDamage(int damage) {
+        int defenseDamage = damage - this.defensePower;
+        this.character.takeDamage(defenseDamage);
+        System.out.println(this.character.getName() + "이 " + defenseDamage + "만큼의 피해를 입었습니다.");
+    }
+
+    // (3) 회복하기 : 플레이어의 HP 20 증가
+    public void healHP() {
+        this.character.heal(20);
+    }
+
+
+    // 현재 hp 상태
+    public int getPlayerHp() {
+        this.character.checkHp();
+        return this.character.getHp();
+    }
+
+
+
+
+
+
+
 }

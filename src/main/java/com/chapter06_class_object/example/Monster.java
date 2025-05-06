@@ -1,30 +1,36 @@
 package com.chapter06_class_object.example;
 
 public class Monster {
-    private int hp;
-    private int attackPower;
+    private Character character;
 
     public Monster() {
-        this.hp = 8000;
-        this.attackPower = 500;
+        this.character = new Character("슬라임", 500, 200);
     }
 
-
-    public void attackPlayer(Player player) {
-        System.out.println("몬스터가 플레이어를 공격합니다!");
-        player.defense(attackPower);
-    }
-
-    public void isDemaged (int demage) {
-        this.hp -= demage;
-        if(this.hp <= 0) {
-            System.out.println("몬스터는 죽었습니다.");
+    // 플레이어 공격
+    public void attackPlayer1(Player player) {
+        if (player != null) {
+            System.out.println("몬스터가 플레이어를 " + this.character.getAttackPower() + "만큼 공격했습니다.");
+            player.takeDamage(this.character.getAttackPower());
         }
-        System.out.println("몬스터가 " + demage + "만큼의 공격을 입었습니다.");
-        System.out.println("현재 몬스터의 hp : " + this.hp);
     }
 
-    public int hp() {
-        return this.hp;
+    public void attackPlayer2(Player player) {
+        if (player != null) {
+            System.out.println("몬스터가 플레이어를 " + this.character.getAttackPower() + "만큼 공격했습니다.");
+            player.defenseDamage(this.character.getAttackPower());
+        }
+    }
+
+    // 플레이어로부터 받는 데미지
+    public void takeDamage(int damage) {
+        this.character.takeDamage(damage);
+        System.out.println(this.character.getName() + "이 " + damage + "만큼의 피해를 입었습니다.");
+    }
+
+    // 현재 hp 상태
+    public int getMonsterHp() {
+        this.character.checkHp();
+        return this.character.getHp();
     }
 }
