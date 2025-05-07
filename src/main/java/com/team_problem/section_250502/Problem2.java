@@ -25,7 +25,7 @@ public class Problem2 {
         */
         Problem2 problem2 = new Problem2();
 
-        System.out.println(problem2.solution(4, 12));
+        System.out.println(problem2.solution(7, 10));
     }
 
     public int solution(int slice, int n) {
