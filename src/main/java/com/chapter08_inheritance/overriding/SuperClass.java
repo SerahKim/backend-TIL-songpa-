@@ -1,4 +1,4 @@
-package com.chatper08_inheritance.overriding;
+package com.chapter08_inheritance.overriding;
 
 public class SuperClass {
     /*

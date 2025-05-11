@@ -1,4 +1,4 @@
-package com.chatper08_inheritance.superkeyword;
+package com.chapter08_inheritance.superkeyword;
 
 public class Application {
     public static void main(String[] args) {

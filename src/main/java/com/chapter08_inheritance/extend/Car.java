@@ -1,4 +1,4 @@
-package com.chatper08_inheritance.extend;
+package com.chapter08_inheritance.extend;
 
 public class Car {
     private boolean runningStatus;
