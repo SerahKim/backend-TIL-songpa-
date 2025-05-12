@@ -26,10 +26,16 @@ public class Book {
         this.publisher = publisher;
     }
 
+    // 책 번호
+    public int getNum() {
+        return this.num;
+    }
+
     // 책 이름
     public String getName() {
         return this.name;
     }
+
     // 도서 정보 출력 메소드
     public String bookInfo() {
         return "책 정보 : [" +
@@ -42,10 +48,12 @@ public class Book {
 
     public int bookCounts(Book[] books) {
         int count = 0;
+
         for (Book b : books) {
             count++;
         }
         return count;
     }
+
 
 }

@@ -1,37 +1,38 @@
 package com.team_problem.section_250508;
 
 public class Comics extends Book{
-    private String genre;
+    private boolean isColor;
 
+    // 기본 생성자
     public Comics() {}
 
-    public Comics(int num, String name, String author, String publisher) {
+    // isColor를 포함한 생성자
+    public Comics(int num, String name, String author, String publisher, boolean isColor) {
         super(num, name, author, publisher);
+        this.isColor = isColor;
     }
 
-    public Comics(int num, String name, String author, String publisher, String genre) {
-        super(num, name, author, publisher);
-        this.genre = genre;
-    }
-
-    // 코믹스 카테고리에 속한 도서 정보 출력
+    // 코믹스 카테고리에 등록된 도서 정보 출력
     @Override
     public String bookInfo() {
-        return  "카테고리 : " + CATEGORY_COMICS + super.bookInfo() + " / 장르 : " + this.genre;
+        return  "카테고리 : " + CATEGORY_COMICS + " / "+ super.bookInfo() + " / 색칠 : " + (this.isColor? "컬러" : "흑백");
     }
 
-//    // 코믹스 카테고리에 속한 도서 수 출력
-//    public int bookCounts (Comics[] comics) {
-//        // 메소드 호출 시 countCategory 초기화
-//        int countCategory = 0;
-//
-//        for (Comics comics1 : comics) {
-//            countCategory++;
-//        }
-//
-//        System.out.println(CATEGORY_COMICS+ "카테고리에 총 " + countCategory + "개의 책이 있습니다.");
-//        return countCategory;
-//    }
+    // 코믹스 카테고리에 등록된 도서 개수 출력
+    @Override
+    public int bookCounts(Book[] books) {
+        int count = 0;
+
+        for (Book b : books) {
+            if (b instanceof Comics) {  // Comics 인스턴스 되어 있는 것만 카운트
+                count++;
+            }
+        }
+
+        return count;
+    }
+
+
 
 
 
