@@ -1,4 +1,4 @@
-package com.chapter12_collection.list;
+package com.chapter12_collection.list.run;
 
 import java.util.*;
 
