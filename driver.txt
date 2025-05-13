@@ -1,0 +1,6 @@
+#jdbc driver
+#Tue May 13 13:15:43 KST 2025
+password=student
+driver=oracle.jdbc.driver.OrcaleDrive
+user=student
+url=jdbc\:oracle\:this\:@127.0.0.1\:1521\:xe
