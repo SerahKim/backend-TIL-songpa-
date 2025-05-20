@@ -1,6 +1,8 @@
 package com.team_problem.section_250427;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Problem3 {
     public static void main(String[] args) {
@@ -16,20 +18,20 @@ public class Problem3 {
         12345	[5,4,3,2,1]
         */
 
-        int n = 12345;
+        long n = 12345;
 
         Problem3 problem3 = new Problem3();
-
-        System.out.println(Arrays.toString(problem3.solution(n)));
+        System.out.println(Arrays.toString((problem3.solution(n))));
     }
+    public int[] solution(long n) {
+        String str = Long.toString(n);
+        int len = str.length();
+        int[] answer = new int[len];
 
-    public int[] solution(int n) {
-        String str = "" + n;
-        int [] intArr = new int[str.length()];
-
-        for (int i = str.length() - 1; i >= 0 ; i--) {
-            intArr[str.length()- 1 - i] = str.charAt(i) - '0';
+        for (int i = 0; i < len; i++) {
+            answer[i] = str.charAt(len - 1 - i) - '0';
         }
-        return intArr;
+
+        return answer;
     }
 }
