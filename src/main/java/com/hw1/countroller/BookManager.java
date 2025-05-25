@@ -1,8 +1,8 @@
-package com.ohgiraffers.hw1.countroller;
+package com.hw1.countroller;
 
-import com.ohgiraffers.hw1.model.comparator.AscCategory;
-import com.ohgiraffers.hw1.model.comparator.DescCategory;
-import com.ohgiraffers.hw1.model.dto.BookDTO;
+import com.hw1.model.comparator.AscCategory;
+import com.hw1.model.comparator.DescCategory;
+import com.hw1.model.dto.BookDTO;
 
 import java.util.ArrayList;
 

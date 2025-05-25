@@ -1,7 +1,7 @@
-package com.ohgiraffers.hw1.view;
+package com.hw1.view;
 
-import com.ohgiraffers.hw1.countroller.BookManager;
-import com.ohgiraffers.hw1.model.dto.BookDTO;
+import com.hw1.countroller.BookManager;
+import com.hw1.model.dto.BookDTO;
 
 import java.util.ArrayList;
 import java.util.Scanner;

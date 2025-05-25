@@ -1,6 +1,6 @@
-package com.ohgiraffers.hw1.model.comparator;
+package com.hw1.model.comparator;
 
-import com.ohgiraffers.hw1.model.dto.BookDTO;
+import com.hw1.model.dto.BookDTO;
 
 import java.util.Comparator;
 

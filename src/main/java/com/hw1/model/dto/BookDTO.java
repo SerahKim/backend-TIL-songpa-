@@ -1,4 +1,4 @@
-package com.ohgiraffers.hw1.model.dto;
+package com.hw1.model.dto;
 
 public class BookDTO {
     private int bNo = (int)(Math.random() * 100);
