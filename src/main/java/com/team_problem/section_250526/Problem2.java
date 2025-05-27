@@ -25,6 +25,30 @@ public class Problem2 {
         입출력 예 #1,2,3,4
         문제의 예시와 같습니다.
         */
+
+        Problem2 problem2 = new Problem2();
+        System.out.println(problem2.solution("(()("));
+
     }
+
+    boolean solution(String s) {
+        int count = 0;
+
+        for (char c : s.toCharArray()) {
+            if (c == '(') {
+                count++;
+            } else {
+                count--;
+            }
+
+            // 닫는 괄호가 더 많아지는 순간 false
+            if (count < 0) {
+                return false;
+            }
+        }
+
+        return count == 0;
+    }
+
 
 }
