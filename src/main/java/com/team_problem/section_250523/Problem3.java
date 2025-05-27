@@ -1,5 +1,7 @@
 package com.team_problem.section_250523;
 
+import com.team_problem.section_250526.Problem1;
+
 public class Problem3 {
     public static void main(String[] args) {
         /*
@@ -21,10 +23,27 @@ public class Problem3 {
         [2,6,8,14]	168
         [1,2,3]	    6
         */
+        Problem3 problem3 = new Problem3();
+        System.out.println(problem3.solution(new int[]{2,6,8,14}));
     }
     public int solution(int[] arr) {
-        int answer = 0;
-        return answer;
+        int result = arr[0];
+
+        for (int i = 1; i < arr.length; i++) {
+            result = lcm(result, arr[i]);
+        }
+
+        return result;
     }
 
+    // 최소공배수 구하기
+    private int lcm(int a, int b) {
+        return (a * b) / gcd(a, b); // 최소공배수 * 최대공약수 = 두 수의 곱
+    }
+
+    // 최대공약수 구하기 (유클리드 호제법)
+    private int gcd(int a, int b) {
+        if (b == 0) return a;
+        return gcd(b, a % b); // b가 0이 될 때까지 재귀
+    }
 }
