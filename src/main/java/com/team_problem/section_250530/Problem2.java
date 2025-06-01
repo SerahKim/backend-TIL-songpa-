@@ -1,6 +1,7 @@
 package com.team_problem.section_250530;
 
 import java.util.Arrays;
+import java.util.Locale;
 
 public class Problem2 {
     public static void main(String[] args) {
@@ -15,12 +16,19 @@ public class Problem2 {
 
         - 입출력 예
         n	      return
-        118372	873211
+        118372	  873211
         */
+
+        Problem2 problem2 = new Problem2();
+        System.out.println(problem2.solution(118372));
     }
     public long solution(long n) {
-        long answer = 0;
+        String[] strArr = String.valueOf(n).split("");
 
-        return answer;
+        Arrays.sort(strArr);
+
+        StringBuilder sb = new StringBuilder(String.join("",strArr)).reverse();
+
+        return Long.parseLong(sb.toString());
     }
 }
